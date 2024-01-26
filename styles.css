@@ -1,0 +1,146 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 25px;
+    padding: 0;
+    animation: changeBackground 20s infinite linear; /* Animation duration: 20s, infinitely repeats linearly */
+    overflow: hidden;
+}
+
+#Menu {
+    display: flex;
+    align-items: center; /* Center vertically */
+}
+
+#Menu {
+    margin-right: 20px; /* Adjust margin to create space between buttons and right edge */
+}
+
+button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    animation: changeTextColor 20s infinite linear;
+    margin-left: 10px; /* Add space between buttons */
+    font-size: medium;
+    font-weight: bold;
+}
+
+button:hover {
+    animation: changeTextColorHover 10s infinite linear;
+    padding-bottom: 5px;
+}
+
+button:active {
+    animation: changeTextColorActive 10s infinite linear;
+    padding-bottom: 0px;
+}
+
+#Menu button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 10px; /* Add space between buttons */
+}
+
+#Banner {
+    background-color: rgba(68, 67, 67, 0.95); /* Background color of the banner */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    text-align: left; /* Left-align the text */
+    text-indent: 20px;
+    width: 95%; /* Make the banner 60% of the viewport width */
+    margin: 0 auto; /* Center the banner horizontally */
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Add space between elements */
+}
+
+
+@keyframes changeBackground {
+    0% {
+        background-color: rgba(235, 199, 0, 0.9); /* Start color */
+    }
+    33% {
+        background-color: rgba(231, 112, 1, 0.9); /* Mid color */
+    }
+    66% {
+        background-color: rgba(230, 16, 1, 0.9); /* End color */
+    }
+    100% {
+        background-color: rgba(231, 112, 1, 0.9); /* Mid color */
+    }
+}
+
+.water-droplet {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.4); /* Fading white color */
+    border-radius: 8px;
+    animation: animateDroplet 3s infinite linear; /* Animation duration: 6s, linear animation */
+    transform-origin: center; /* Set the rotation origin to the center */
+}
+
+@keyframes animateDroplet {
+    0% {
+        opacity: 1; /* Full opacity */
+        transform: translateY(-20px) scale(1) rotate(0deg); /* Initial position, size, and rotation */
+    }
+    100% {
+        opacity: 0; /* Completely transparent */
+        transform: translateY(100vh) scale(0.5) rotate(360deg); /* Move downwards, shrink, and rotate */
+    }
+}
+
+@keyframes changeTextColor {
+    0% {
+        color: rgba(255, 217, 0, 0.8); /* Start color */
+    }
+    33% {
+        color: rgba(255, 123, 0, 0.8); /* Mid color */
+    }
+    66% {
+        color: rgba(255, 17, 0, 0.8); /* End color */
+    }
+    100% {
+        color: rgba(255, 123, 0, 0.8); /* Mid color */
+    }
+}
+
+@keyframes changeTextColorHover {
+    0% {
+        color: rgba(255, 217, 0, 0.9); /* Start color */
+    }
+    33% {
+        color: rgba(255, 123, 0, 0.9); /* Mid color */
+    }
+    66% {
+        color: rgba(255, 17, 0, 0.9); /* End color */
+    }
+    100% {
+        color: rgba(255, 123, 0, 0.9); /* Mid color */
+    }
+}
+
+@keyframes changeTextColorActive {
+    0% {
+        color: rgb(255, 217, 0); /* Start color */
+    }
+    33% {
+        color: rgb(255, 123, 0); /* Mid color */
+    }
+    66% {
+        color: rgb(255, 17, 0); /* End color */
+    }
+    100% {
+        color: rgb(255, 123, 0); /* Mid color */
+    }
+}
+
+#Banner h1 {
+    animation: changeTextColor 20s infinite linear; /* Animation duration: 20s, infinitely repeats linearly */
+}
+
+p {
+    color: #666;
+}
