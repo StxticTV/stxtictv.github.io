@@ -82,13 +82,15 @@ button:active {
 }
 
 .container {
-    max-width: 800px;
+    display: flex;
+    max-width: 95%;
     margin: 0 auto;
+    gap: 15px;
     padding: 20px;
 }
 
 .project-card {
-    background-color: #f4f4f4;
+    background-color: #b8abab;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
