@@ -19,7 +19,7 @@ button {
     background-color: rgba(0, 0, 0, 0);
     animation: changeTextColor 20s infinite linear;
     margin-left: 10px; /* Add space between buttons */
-    font-size: medium;
+    font-size: large;
     font-weight: bold;
 }
 
@@ -148,7 +148,7 @@ p {
 }
 
 /* Mobile optimizations */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 595px) {
     body {
         margin: 25px;
         padding: 0;
@@ -157,11 +157,29 @@ p {
         justify-content: right;
     }
     button {
-        font-size: 9px;
-        margin: 5px;
+        font-size: 10px;
+        margin: 0px;
     }
     #Banner {
         font-size: 10px;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    body {
+        margin: 25px;
+        padding: 0;
+    }
+    #Menu {
+        justify-content: right;
+    }
+    button {
+        font-size: 8px;
+        margin: 0px;
+    }
+    #Banner {
+        font-size: 8px;
         text-align: left;
     }
 }
