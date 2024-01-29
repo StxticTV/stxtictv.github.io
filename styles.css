@@ -11,15 +11,12 @@ body {
 #Menu {
     display: flex;
     align-items: center; /* Center vertically */
-}
-
-#Menu {
     margin-right: 20px; /* Adjust margin to create space between buttons and right edge */
 }
 
 button {
-    border: none;
-    background-color: rgba(255, 255, 255, 0);
+    border: 1px;
+    background-color: rgba(0, 0, 0, 0);
     animation: changeTextColor 20s infinite linear;
     margin-left: 10px; /* Add space between buttons */
     font-size: medium;
@@ -27,18 +24,15 @@ button {
 }
 
 button:hover {
-    animation: changeTextColorHover 10s infinite linear;
+    animation: changeTextColor 20s infinite linear;
     padding-bottom: 5px;
 }
 
 button:active {
-    animation: changeTextColorActive 10s infinite linear;
     padding-bottom: 0px;
 }
 
 #Menu button {
-    border: none;
-    background-color: rgba(255, 255, 255, 0);
     margin-left: 10px; /* Add space between buttons */
 }
 
@@ -83,27 +77,10 @@ button:active {
 
 .container {
     display: flex;
-    max-width: 95%;
-    margin: 0 auto;
     gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-}
-
-.project-card {
-    background-color: #b8abab;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.project-card h3 {
-    margin-bottom: 10px;
-    font-size: 1.5rem;
-}
-
-.project-card p {
-    color: #555;
 }
 
 @keyframes animateDroplet {
@@ -168,4 +145,24 @@ button:active {
 
 p {
     color: #666;
+}
+
+/* Mobile optimizations */
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 25px;
+        padding: 0;
+    }
+    #Menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    button {
+        font-size: 90%;
+        margin: 5px;
+    }
+    #Banner {
+        font-size: 80%;
+        text-align: center;
+    }
 }

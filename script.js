@@ -1,6 +1,4 @@
 // script.js
-// GitHub API endpoint to fetch repositories
-const apiUrl = 'https://api.github.com/users/StxticTV/repos';
 
 document.addEventListener("DOMContentLoaded", function() {
     const container = document.getElementById("water-droplet-container");
@@ -27,30 +25,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
     generateRaindrops(); // Start generating raindrops 
 });
-
-// Fetch repositories from GitHub API
-fetch(apiUrl)
-    .then(response => response.json())
-    .then(repositories => {
-        const projectsContainer = document.getElementById('projects-container');
-
-        // Iterate through repositories and create HTML elements to display them
-        repositories.forEach(repo => {
-            const projectCard = document.createElement('div');
-            projectCard.classList.add('project-card');
-
-            const projectName = document.createElement('h3');
-            projectName.textContent = repo.name;
-
-            const projectDescription = document.createElement('p');
-            projectDescription.textContent = repo.description;
-
-            // You can add more details like stars, forks, etc.
-
-            projectCard.appendChild(projectName);
-            projectCard.appendChild(projectDescription);
-
-            projectsContainer.appendChild(projectCard);
-        });
-    })
-    .catch(error => console.error('Error fetching repositories:', error));
